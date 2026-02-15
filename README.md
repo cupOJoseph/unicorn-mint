@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🦄 Unicorn Mint
 
-## Getting Started
+A magical NFT minting application built with Next.js for creating unique Unicorn NFTs on Arbitrum One.
 
-First, run the development server:
+## ✨ Features
 
+- **Wallet Connection**: Connect with Rabby or any injected wallet using RainbowKit
+- **NFT Minting**: Create custom unicorns with:
+  - Custom names
+  - Horn length (1-10)
+  - Majestic status toggle
+- **Real-time Stats**: View total unicorns minted
+- **Mobile Responsive**: Beautiful gradient UI that works on all devices
+- **Transaction Tracking**: Real-time status updates during minting
+
+## 🛠️ Tech Stack
+
+- **Next.js 15** with App Router
+- **TypeScript** for type safety
+- **Tailwind CSS** for styling
+- **wagmi v2** for Ethereum interactions
+- **viem** for Ethereum utilities
+- **RainbowKit** for wallet connection
+- **React Query** for state management
+
+## 🚀 Contract Details
+
+- **Chain**: Arbitrum One (Chain ID: 42161)
+- **Contract Address**: `0x0090d53817C85F6BcdCE57E78E857d80A9F586F3`
+
+### Contract Functions
+
+- `mintNFT(uint256 _hornL, string _name, bool _magestic)` - Mint a new unicorn
+- `current_id()` - Get the next token ID
+- `tokenURI(uint256 _id)` - Get token metadata
+- `owners(uint256)` - Get token owner
+- `unicorns(uint256)` - Get unicorn details
+- `transfer(address _to, uint256 _id)` - Transfer ownership
+- `updateHorn(uint256 newHornSize, uint256 _id)` - Update horn length
+
+## 🏃‍♂️ Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+- A Web3 wallet (MetaMask, Rabby, etc.)
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/cupOJoseph/unicorn-mint.git
+cd unicorn-mint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+### Building for Production
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 UI Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Purple/Blue Gradient Theme**: Magical unicorn-inspired design
+- **Glassmorphism Effects**: Modern backdrop blur effects
+- **Interactive Elements**: Hover animations and transitions
+- **Responsive Design**: Perfect on mobile and desktop
+- **Real-time Feedback**: Loading states and success/error messages
 
-## Deploy on Vercel
+## 🌐 Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This app is deployed on Vercel with automatic deployments from the main branch.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📝 License
+
+MIT License - feel free to use this code for your own magical NFT projects!
+
+## 🦄 About
+
+Created with love for the unicorn community. Each NFT is unique with customizable horn lengths and majestic status. Join the magical world of unicorn collecting!
